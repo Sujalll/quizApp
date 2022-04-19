@@ -1,0 +1,72 @@
+body {
+    background-color: rgba(100, 161, 218, 0.479);
+  }
+  
+  .startQuiz {
+    margin-top: 125px;
+    text-align: center;
+    display: none;
+  }
+  
+  .inputs{
+    margin-top: 90px;
+  }
+  
+  .heading{
+    text-align: center;
+    font-size: 1.9rem;
+    color: white;
+    background-color: blue;
+    font-weight: bold;
+  }
+  
+  .questionBlock{
+    margin-top: 100px;
+    height: 100%;
+    display: none;
+  }
+  
+  .progress{
+    display: none;
+  }
+  
+  .catForm {
+    display: none;
+  }
+  
+  .resultBlock {
+    display: none;
+    margin-top: 100px;
+  }
+  
+  .card {
+    margin: 0 auto;
+    /* Added */
+    float: none;
+    /* Added */
+    margin-bottom: 10px;
+    /* Added */
+  }
+  
+  .activeNow {
+    display: block;
+  }
+  
+  .answer {
+    margin: 5px;
+    cursor: pointer;
+  }
+  
+  .correct {
+    color: green;
+  }
+  
+  .wrong {
+    color: red;
+  }
+  
+  .disabl {
+    pointer-events: none;
+  }
+  
+  

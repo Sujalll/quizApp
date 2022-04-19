@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Application</title>
+  <!-- Compiled and minified CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Compiled and minified JavaScript -->
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+
+
+  <!-- Compiled and minified Jquery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+            
+</head>
+<body>
+  <div class="container">
+    <h1 style="text-align:center; margin-top:10px;">The Heart Coder</h1>  
+    <!-- preLoader -->
+ 
+
+    <div class="d-flex justify-content-center">
+      <div class="spinner-border progress" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+
+    <div class="row startQuiz activeNow"><a class="btn btn-secondary" style="width: 30%;" id="startQuiz">Start Quiz</a></div>
+    <!-- Requirement form for quiz third party api -->
+    <div class="row inputs catForm" id="requirementBlock">
+      <div class="heading"> What is your requirement ?</div>
+      <br/>
+      <div class="mb-3">
+        <select class="form-select" id="catSelect">
+        </select>
+      </div>
+      <div class="mb-3">
+        <select class="form-select" id="diffSelect">
+          <option value="" disabled selected>Choose Question Difficulty</option>
+          <option value="easy">Easy</option>
+          <option value="medium">Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <input id="questionNo" type="number" class="form-control" placeholder="No of question">
+      </div>
+      <div>
+        <a class="btn btn-primary" id="formSubmit" style="float: right;">Submit</a>
+      </div>
+    </div>
+
+    <!-- Question & Answers -->
+
+    <div class="questionBlock">
+      <div class="card" style="width: 78rem;">
+        <div class="card-header" id="questionArea">
+          Featured
+        </div>
+        <ul class="list-group list-group-flush" id="answerArea">
+          <li class="list-group-item">>Answer 01</li>
+          <li class="list-group-item">Answer 02</li>
+          <li class="list-group-item">Answer 03</li>
+        </ul>
+        <div class="card-footer" style="text-align:right;">
+          <button id="resetQuiz" class="btn btn-secondary">Reset</button>
+          <button id="nextQuestion" class="btn btn-primary">Next Question</button>
+        </div>
+      </div>
+    </div>
+
+    
+
+    <!-- Results -->
+    <div class="resultBlock">
+      <div class="card text-white bg-dark mb-3 resultBlock" style="max-width: 48rem;">
+        <div class="card-header">Your Result</div>
+        <div class="card-body">
+          <h5 class="card-title">Your result is shown here</h5>
+          <b id='fullMarks'>Full Score: 100</b> <br />
+          <b id='marks'>Your Score: 100</b>
+        </div>
+        <div class="card-footer" style="text-align:right;">
+          <button class="btn btn-secondary" onclick="window.location.reload();">Reset</button>
+        </div>
+      </div>
+      
+    </div>
+
+    
+    
+  </div>
+  
+
+  <script src="script.js"></script>
+</body>
+</html>
